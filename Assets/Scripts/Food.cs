@@ -15,12 +15,21 @@ public class Food : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
+
     void setRandom()
     {
         float x = Random.Range(-xBounds, xBounds);
         float y = Random.Range(-yBounds, yBounds);
         gameObject.transform.position = new Vector2(Mathf.Round(x), Mathf.Round(y));
+    }
+
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Player")
+        {
+            setRandom();
+        }
     }
 }

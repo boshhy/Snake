@@ -9,26 +9,25 @@ public class SnakeController : MonoBehaviour
     private PlayerControls playerControls;
     private Vector2 snakeMovement = Vector2.down;
     private Vector2 lastDirection;
+    private List<Transform> snakeBody = new List<Transform>();
+    public Transform bodySegment;
 
     void Awake()
     {
         rBody2D = GetComponent<Rigidbody2D>();
         playerControls = new PlayerControls();
-
-        playerControls.Snake.Enable();
-        playerControls.Snake.Movement.performed += MoveSnake;
     }
 
     // Start is called before the first frame update
     void Start()
     {
-
+        ResetGame();
     }
 
     // Update is called once per frame
     void Update()
     {
-        //playerControls.Snake.Movement.ReadValue<Vector2>();
+
     }
 
     void MoveSnake(InputAction.CallbackContext cntx)
@@ -56,15 +55,74 @@ public class SnakeController : MonoBehaviour
         }
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
+        Vector2 frontTransform = gameObject.transform.position;
+        Vector2 tempTransform = gameObject.transform.position;
+
         gameObject.transform.position = new Vector2(
                     Mathf.Round(gameObject.transform.position.x + snakeMovement.x), 
                     Mathf.Round(gameObject.transform.position.y + snakeMovement.y)
         );
+
+        for (int i = 1; i <= snakeBody.Count - 1; i++)
+        {
+            tempTransform = snakeBody[i].position;
+            snakeBody[i].position = frontTransform;
+            frontTransform = tempTransform;
+        }
+
         lastDirection = snakeMovement;
-        // Vector3 oldLocation = gameObject.transform.position;
-        // oldLocation.x += 1;
-        // this.transform.position = new Vector3(oldLocation.x, oldLocation.y, oldLocation.z);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Food")
+        {
+            Grow();
+        }
+
+        if (other.tag == "Wall" || other.tag == "Body")
+        {
+            ResetGame();
+        }
+    }
+
+    private void Grow()
+    {
+        Transform newBodySegment = Instantiate(bodySegment);
+        newBodySegment.position = snakeBody[snakeBody.Count - 1].position;
+
+        snakeBody.Add(newBodySegment);
+
+    }
+
+    private void ResetGame(){
+        for (int i = 1; i < snakeBody.Count; i++)
+        {
+            Destroy(snakeBody[i].gameObject);
+        }
+
+        snakeBody.Clear();
+        snakeBody.Add(gameObject.transform);
+
+        for (int i = 1; i < 3; i++)
+        {
+            snakeBody.Add(Instantiate(bodySegment));
+        }
+
+        gameObject.transform.position = Vector2.zero;
+    }
+
+    private void OnEnable()
+    {
+        playerControls.Snake.Enable();
+        playerControls.Snake.Movement.performed += MoveSnake;
+    }
+
+    private void  OnDisable()
+    {
+        playerControls.Snake.Disable();
+        playerControls.Snake.Movement.performed -= MoveSnake;
     }
 }
