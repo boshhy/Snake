@@ -14,6 +14,8 @@ public class SnakeController : MonoBehaviour
     public Transform bodySegment;
     public static event Action onDeath;
 
+    public AudioSource bgm;
+
     void Awake()
     {
         rBody2D = GetComponent<Rigidbody2D>();
@@ -23,6 +25,7 @@ public class SnakeController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         ResetGame();
     }
 
@@ -124,12 +127,21 @@ public class SnakeController : MonoBehaviour
 
     private void SpeedUp(InputAction.CallbackContext cntx)
     {
-        Time.timeScale = 3.0f;
+        if (!PauseMenu.isPaused)
+        {
+            
+            bgm.pitch = 1.2f;
+            Time.timeScale = 3.0f;
+        }
     }
 
     private void BackToNormalSpeed(InputAction.CallbackContext cntx)
     {
-        Time.timeScale = 1.0f;
+        if (!PauseMenu.isPaused)
+        {
+            bgm.pitch = 1.0f;
+            Time.timeScale = 1.0f;
+        }
     }
 
     private void OnEnable()

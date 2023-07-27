@@ -37,7 +37,7 @@ public class Food : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            
+            AudioManager.instance.PlaySFX(0);
             if (onFoodCollected != null)
             {
                 onFoodCollected();
