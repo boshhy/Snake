@@ -2797,7 +2797,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7457163240604843943, guid: f5f700d1b0da91243b7437a104acc0c6, type: 3}
       propertyPath: m_Name
-      value: Snake Head
+      value: Snake Head Player One
       objectReference: {fileID: 0}
     - target: {fileID: 7572910993879708639, guid: f5f700d1b0da91243b7437a104acc0c6, type: 3}
       propertyPath: bgm
