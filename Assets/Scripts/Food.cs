@@ -1,11 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System;
 public class Food : MonoBehaviour
 {
-    public int xBounds = 41;
-    public int yBounds = 22;
+    public static event Action onFoodCollected;
+
+    public int xBoundsLow = -41;
+    public int yBoundsLow = -22;
+
+    public int xBoundsHigh = 41;
+    public int yBoundsHigh = 17;
+    
+ 
     // Start is called before the first frame update
     void Start()
     {
@@ -20,8 +27,9 @@ public class Food : MonoBehaviour
 
     void setRandom()
     {
-        float x = Random.Range(-xBounds, xBounds);
-        float y = Random.Range(-yBounds, yBounds);
+        float x = UnityEngine.Random.Range(xBoundsLow, xBoundsHigh);
+        float y = UnityEngine.Random.Range(yBoundsLow, yBoundsHigh);
+        
         gameObject.transform.position = new Vector2(Mathf.Round(x), Mathf.Round(y));
     }
 
@@ -29,6 +37,11 @@ public class Food : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            
+            if (onFoodCollected != null)
+            {
+                onFoodCollected();
+            }
             setRandom();
         }
     }

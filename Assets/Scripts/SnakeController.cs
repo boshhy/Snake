@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System;
 
 public class SnakeController : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class SnakeController : MonoBehaviour
     private Vector2 lastDirection;
     private List<Transform> snakeBody = new List<Transform>();
     public Transform bodySegment;
+    public static event Action onDeath;
 
     void Awake()
     {
@@ -97,7 +99,13 @@ public class SnakeController : MonoBehaviour
 
     }
 
-    private void ResetGame(){
+    private void ResetGame()
+    {
+        if (onDeath != null)
+        {
+            onDeath();
+        }
+        
         for (int i = 1; i < snakeBody.Count; i++)
         {
             Destroy(snakeBody[i].gameObject);
@@ -114,15 +122,29 @@ public class SnakeController : MonoBehaviour
         gameObject.transform.position = Vector2.zero;
     }
 
+    private void SpeedUp(InputAction.CallbackContext cntx)
+    {
+        Time.timeScale = 3.0f;
+    }
+
+    private void BackToNormalSpeed(InputAction.CallbackContext cntx)
+    {
+        Time.timeScale = 1.0f;
+    }
+
     private void OnEnable()
     {
         playerControls.Snake.Enable();
         playerControls.Snake.Movement.performed += MoveSnake;
+        playerControls.Snake.Faster.performed += SpeedUp;
+        playerControls.Snake.Faster.canceled += BackToNormalSpeed;
     }
 
     private void  OnDisable()
     {
         playerControls.Snake.Disable();
         playerControls.Snake.Movement.performed -= MoveSnake;
+        playerControls.Snake.Faster.performed -= SpeedUp;
+        playerControls.Snake.Faster.canceled -= BackToNormalSpeed;
     }
 }

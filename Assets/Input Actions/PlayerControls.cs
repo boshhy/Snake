@@ -35,6 +35,15 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Faster"",
+                    ""type"": ""Button"",
+                    ""id"": ""24361f27-7d9c-41f9-8fce-1eca792a42ca"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -257,6 +266,28 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""action"": ""Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""273730a7-a74d-4a82-a1f8-cce54128c96a"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Xbox 360 Controller"",
+                    ""action"": ""Faster"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5034a5cc-be9a-4eb9-a687-1cb7508bed14"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Faster"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -289,6 +320,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         // Snake
         m_Snake = asset.FindActionMap("Snake", throwIfNotFound: true);
         m_Snake_Movement = m_Snake.FindAction("Movement", throwIfNotFound: true);
+        m_Snake_Faster = m_Snake.FindAction("Faster", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -351,11 +383,13 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Snake;
     private List<ISnakeActions> m_SnakeActionsCallbackInterfaces = new List<ISnakeActions>();
     private readonly InputAction m_Snake_Movement;
+    private readonly InputAction m_Snake_Faster;
     public struct SnakeActions
     {
         private @PlayerControls m_Wrapper;
         public SnakeActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @Movement => m_Wrapper.m_Snake_Movement;
+        public InputAction @Faster => m_Wrapper.m_Snake_Faster;
         public InputActionMap Get() { return m_Wrapper.m_Snake; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -368,6 +402,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Movement.started += instance.OnMovement;
             @Movement.performed += instance.OnMovement;
             @Movement.canceled += instance.OnMovement;
+            @Faster.started += instance.OnFaster;
+            @Faster.performed += instance.OnFaster;
+            @Faster.canceled += instance.OnFaster;
         }
 
         private void UnregisterCallbacks(ISnakeActions instance)
@@ -375,6 +412,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Movement.started -= instance.OnMovement;
             @Movement.performed -= instance.OnMovement;
             @Movement.canceled -= instance.OnMovement;
+            @Faster.started -= instance.OnFaster;
+            @Faster.performed -= instance.OnFaster;
+            @Faster.canceled -= instance.OnFaster;
         }
 
         public void RemoveCallbacks(ISnakeActions instance)
@@ -413,5 +453,6 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     public interface ISnakeActions
     {
         void OnMovement(InputAction.CallbackContext context);
+        void OnFaster(InputAction.CallbackContext context);
     }
 }
