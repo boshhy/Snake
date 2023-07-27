@@ -170,7 +170,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""Dpad"",
-                    ""id"": ""582ee2af-5627-47d0-9dca-d4ffa3ccef66"",
+                    ""id"": ""a670515e-ceab-4f0e-8e7e-15b6189ede99"",
                     ""path"": ""2DVector"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -181,7 +181,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""up"",
-                    ""id"": ""d3c0f936-5b1c-4b33-afa8-d266f79e8595"",
+                    ""id"": ""2d5dd291-6d56-440c-a670-74521b7683ec"",
                     ""path"": ""<Gamepad>/dpad/up"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -192,7 +192,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""down"",
-                    ""id"": ""d3ae621f-62e6-487c-bccb-9c1916756122"",
+                    ""id"": ""0f5324e0-652d-4583-8ea6-19c6d9828c03"",
                     ""path"": ""<Gamepad>/dpad/down"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -203,7 +203,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""left"",
-                    ""id"": ""0da256d8-fd70-4f87-b152-f9b277e143a9"",
+                    ""id"": ""501b2b6a-d841-4d86-9757-c79282f9f71f"",
                     ""path"": ""<Gamepad>/dpad/left"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -214,7 +214,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""right"",
-                    ""id"": ""2ee9c4ad-2fd7-4016-8415-dc3b575e2bea"",
+                    ""id"": ""7a4cd78c-083a-4575-9e3c-917ad0cae1a5"",
                     ""path"": ""<Gamepad>/dpad/right"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -225,7 +225,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""Left Stick"",
-                    ""id"": ""da2277f4-2221-4dfb-9dc2-ac15d5f10f87"",
+                    ""id"": ""487f9375-2794-458b-ae1f-59d58967216c"",
                     ""path"": ""2DVector"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -236,7 +236,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""up"",
-                    ""id"": ""7a2a1bc7-1fce-46dc-9dec-bb7b93cbf7af"",
+                    ""id"": ""a0d5d633-77a5-4063-8c2d-1cb20934036b"",
                     ""path"": ""<Gamepad>/leftStick/up"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -247,7 +247,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""down"",
-                    ""id"": ""0d247cd6-9112-4519-8a2f-3b3f319a40fa"",
+                    ""id"": ""978cffcf-0b09-4ee6-b3e7-d1a11cf0193a"",
                     ""path"": ""<Gamepad>/leftStick/down"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -258,7 +258,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""left"",
-                    ""id"": ""b68ceb25-e7d9-4b9a-9f4e-4591f2289d16"",
+                    ""id"": ""59804d00-e085-4fb1-be27-688a586d3d06"",
                     ""path"": ""<Gamepad>/leftStick/left"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -269,7 +269,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""right"",
-                    ""id"": ""d8d8dc95-042a-48ee-93a1-7578009a97e8"",
+                    ""id"": ""3576b73c-364d-471f-95b4-3426cd9fc31b"",
                     ""path"": ""<Gamepad>/leftStick/right"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -280,11 +280,158 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""403bf71b-5d3d-4e6a-a0da-1a2c0548177e"",
+                    ""id"": ""55237697-92d6-4ca1-8825-89b20e772d0a"",
                     ""path"": ""<Gamepad>/buttonSouth"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Xbox 360 Controller"",
+                    ""action"": ""Faster"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""Snake Player One"",
+            ""id"": ""a0bc74fa-6c25-45e3-bd78-e6b4de78e180"",
+            ""actions"": [
+                {
+                    ""name"": ""Movement"",
+                    ""type"": ""Value"",
+                    ""id"": ""459d378a-e973-400b-acd9-41706584e85c"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Faster"",
+                    ""type"": ""Button"",
+                    ""id"": ""1e536fdd-ae8d-4bdf-9f25-19a649bdb376"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": ""WASD"",
+                    ""id"": ""d7aa9cce-89ec-40a8-b03c-b4731c911534"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""83dc24ba-41e6-4d38-803b-08b3b1066273"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""8c8ff3b9-de1f-41a3-984d-ac9595adf2ca"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""deaa05cf-be8b-4d2d-870d-c972d0487621"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""c6553215-e2cd-4bd4-8abf-cf7bc279ba69"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""Arrow Keys"",
+                    ""id"": ""acb7823a-d182-4355-90e0-1e52c1eb7c93"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""890917aa-62eb-48a4-8df2-0a27d328500f"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""a799a345-46d0-4a6e-b7a7-5089794215d5"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""7f82f85f-c047-4e12-a441-658f73bdfff4"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""9b0ea40b-226c-4a43-9cc3-a8487e307a31"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c81d305a-739a-468f-bd44-8d7a36a0a756"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
                     ""action"": ""Faster"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -501,6 +648,153 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Snake Player Two"",
+            ""id"": ""b39166fb-85a1-46ba-be20-55bcabd46771"",
+            ""actions"": [
+                {
+                    ""name"": ""Movement"",
+                    ""type"": ""Value"",
+                    ""id"": ""ad4bbe1d-ed02-433d-aa03-b1cb991940fd"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Faster"",
+                    ""type"": ""Button"",
+                    ""id"": ""f94ce4dc-4138-4a0f-abd4-4e605e3fc2dd"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": ""Dpad"",
+                    ""id"": ""e04d50dc-5e4d-4fd2-96ad-5915bc6e4982"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""7ca3fc3a-136c-45f6-9895-a51415f61402"",
+                    ""path"": ""<Gamepad>/dpad/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Xbox 360 Controller"",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""36d86261-ee20-446f-b056-5bb2357a7799"",
+                    ""path"": ""<Gamepad>/dpad/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Xbox 360 Controller"",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""f837c67f-8310-4785-9b55-da779866ef41"",
+                    ""path"": ""<Gamepad>/dpad/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Xbox 360 Controller"",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""992a6b4e-a8ad-4857-af85-9e8547aea06e"",
+                    ""path"": ""<Gamepad>/dpad/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Xbox 360 Controller"",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""Left Stick"",
+                    ""id"": ""4ccb8f7c-2c4d-4366-bbb4-20a3e83d68fd"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""50724bf8-4785-4577-8d41-372d3003f434"",
+                    ""path"": ""<Gamepad>/leftStick/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Xbox 360 Controller"",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""85ee1902-d2b8-46de-a9d4-fc10359d609c"",
+                    ""path"": ""<Gamepad>/leftStick/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Xbox 360 Controller"",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""b760dcd0-2c76-4f41-a27b-c9eda49f34a7"",
+                    ""path"": ""<Gamepad>/leftStick/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Xbox 360 Controller"",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""4a9534c4-f716-40e3-b737-18597ae6aba9"",
+                    ""path"": ""<Gamepad>/leftStick/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Xbox 360 Controller"",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e97edbfd-08fe-43fd-8cb9-2fe2fe1494f7"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Xbox 360 Controller"",
+                    ""action"": ""Faster"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": [
@@ -532,11 +826,19 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         m_Snake = asset.FindActionMap("Snake", throwIfNotFound: true);
         m_Snake_Movement = m_Snake.FindAction("Movement", throwIfNotFound: true);
         m_Snake_Faster = m_Snake.FindAction("Faster", throwIfNotFound: true);
+        // Snake Player One
+        m_SnakePlayerOne = asset.FindActionMap("Snake Player One", throwIfNotFound: true);
+        m_SnakePlayerOne_Movement = m_SnakePlayerOne.FindAction("Movement", throwIfNotFound: true);
+        m_SnakePlayerOne_Faster = m_SnakePlayerOne.FindAction("Faster", throwIfNotFound: true);
         // PauseUI
         m_PauseUI = asset.FindActionMap("PauseUI", throwIfNotFound: true);
         m_PauseUI_Pause = m_PauseUI.FindAction("Pause", throwIfNotFound: true);
         m_PauseUI_Move = m_PauseUI.FindAction("Move", throwIfNotFound: true);
         m_PauseUI_Select = m_PauseUI.FindAction("Select", throwIfNotFound: true);
+        // Snake Player Two
+        m_SnakePlayerTwo = asset.FindActionMap("Snake Player Two", throwIfNotFound: true);
+        m_SnakePlayerTwo_Movement = m_SnakePlayerTwo.FindAction("Movement", throwIfNotFound: true);
+        m_SnakePlayerTwo_Faster = m_SnakePlayerTwo.FindAction("Faster", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -649,6 +951,60 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     }
     public SnakeActions @Snake => new SnakeActions(this);
 
+    // Snake Player One
+    private readonly InputActionMap m_SnakePlayerOne;
+    private List<ISnakePlayerOneActions> m_SnakePlayerOneActionsCallbackInterfaces = new List<ISnakePlayerOneActions>();
+    private readonly InputAction m_SnakePlayerOne_Movement;
+    private readonly InputAction m_SnakePlayerOne_Faster;
+    public struct SnakePlayerOneActions
+    {
+        private @PlayerControls m_Wrapper;
+        public SnakePlayerOneActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Movement => m_Wrapper.m_SnakePlayerOne_Movement;
+        public InputAction @Faster => m_Wrapper.m_SnakePlayerOne_Faster;
+        public InputActionMap Get() { return m_Wrapper.m_SnakePlayerOne; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(SnakePlayerOneActions set) { return set.Get(); }
+        public void AddCallbacks(ISnakePlayerOneActions instance)
+        {
+            if (instance == null || m_Wrapper.m_SnakePlayerOneActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_SnakePlayerOneActionsCallbackInterfaces.Add(instance);
+            @Movement.started += instance.OnMovement;
+            @Movement.performed += instance.OnMovement;
+            @Movement.canceled += instance.OnMovement;
+            @Faster.started += instance.OnFaster;
+            @Faster.performed += instance.OnFaster;
+            @Faster.canceled += instance.OnFaster;
+        }
+
+        private void UnregisterCallbacks(ISnakePlayerOneActions instance)
+        {
+            @Movement.started -= instance.OnMovement;
+            @Movement.performed -= instance.OnMovement;
+            @Movement.canceled -= instance.OnMovement;
+            @Faster.started -= instance.OnFaster;
+            @Faster.performed -= instance.OnFaster;
+            @Faster.canceled -= instance.OnFaster;
+        }
+
+        public void RemoveCallbacks(ISnakePlayerOneActions instance)
+        {
+            if (m_Wrapper.m_SnakePlayerOneActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(ISnakePlayerOneActions instance)
+        {
+            foreach (var item in m_Wrapper.m_SnakePlayerOneActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_SnakePlayerOneActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public SnakePlayerOneActions @SnakePlayerOne => new SnakePlayerOneActions(this);
+
     // PauseUI
     private readonly InputActionMap m_PauseUI;
     private List<IPauseUIActions> m_PauseUIActionsCallbackInterfaces = new List<IPauseUIActions>();
@@ -710,6 +1066,60 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         }
     }
     public PauseUIActions @PauseUI => new PauseUIActions(this);
+
+    // Snake Player Two
+    private readonly InputActionMap m_SnakePlayerTwo;
+    private List<ISnakePlayerTwoActions> m_SnakePlayerTwoActionsCallbackInterfaces = new List<ISnakePlayerTwoActions>();
+    private readonly InputAction m_SnakePlayerTwo_Movement;
+    private readonly InputAction m_SnakePlayerTwo_Faster;
+    public struct SnakePlayerTwoActions
+    {
+        private @PlayerControls m_Wrapper;
+        public SnakePlayerTwoActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Movement => m_Wrapper.m_SnakePlayerTwo_Movement;
+        public InputAction @Faster => m_Wrapper.m_SnakePlayerTwo_Faster;
+        public InputActionMap Get() { return m_Wrapper.m_SnakePlayerTwo; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(SnakePlayerTwoActions set) { return set.Get(); }
+        public void AddCallbacks(ISnakePlayerTwoActions instance)
+        {
+            if (instance == null || m_Wrapper.m_SnakePlayerTwoActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_SnakePlayerTwoActionsCallbackInterfaces.Add(instance);
+            @Movement.started += instance.OnMovement;
+            @Movement.performed += instance.OnMovement;
+            @Movement.canceled += instance.OnMovement;
+            @Faster.started += instance.OnFaster;
+            @Faster.performed += instance.OnFaster;
+            @Faster.canceled += instance.OnFaster;
+        }
+
+        private void UnregisterCallbacks(ISnakePlayerTwoActions instance)
+        {
+            @Movement.started -= instance.OnMovement;
+            @Movement.performed -= instance.OnMovement;
+            @Movement.canceled -= instance.OnMovement;
+            @Faster.started -= instance.OnFaster;
+            @Faster.performed -= instance.OnFaster;
+            @Faster.canceled -= instance.OnFaster;
+        }
+
+        public void RemoveCallbacks(ISnakePlayerTwoActions instance)
+        {
+            if (m_Wrapper.m_SnakePlayerTwoActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(ISnakePlayerTwoActions instance)
+        {
+            foreach (var item in m_Wrapper.m_SnakePlayerTwoActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_SnakePlayerTwoActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public SnakePlayerTwoActions @SnakePlayerTwo => new SnakePlayerTwoActions(this);
     private int m_KeyboardSchemeIndex = -1;
     public InputControlScheme KeyboardScheme
     {
@@ -733,10 +1143,20 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         void OnMovement(InputAction.CallbackContext context);
         void OnFaster(InputAction.CallbackContext context);
     }
+    public interface ISnakePlayerOneActions
+    {
+        void OnMovement(InputAction.CallbackContext context);
+        void OnFaster(InputAction.CallbackContext context);
+    }
     public interface IPauseUIActions
     {
         void OnPause(InputAction.CallbackContext context);
         void OnMove(InputAction.CallbackContext context);
         void OnSelect(InputAction.CallbackContext context);
+    }
+    public interface ISnakePlayerTwoActions
+    {
+        void OnMovement(InputAction.CallbackContext context);
+        void OnFaster(InputAction.CallbackContext context);
     }
 }

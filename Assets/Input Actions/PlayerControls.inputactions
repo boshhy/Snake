@@ -148,7 +148,7 @@
                 },
                 {
                     "name": "Dpad",
-                    "id": "582ee2af-5627-47d0-9dca-d4ffa3ccef66",
+                    "id": "a670515e-ceab-4f0e-8e7e-15b6189ede99",
                     "path": "2DVector",
                     "interactions": "",
                     "processors": "",
@@ -159,7 +159,7 @@
                 },
                 {
                     "name": "up",
-                    "id": "d3c0f936-5b1c-4b33-afa8-d266f79e8595",
+                    "id": "2d5dd291-6d56-440c-a670-74521b7683ec",
                     "path": "<Gamepad>/dpad/up",
                     "interactions": "",
                     "processors": "",
@@ -170,7 +170,7 @@
                 },
                 {
                     "name": "down",
-                    "id": "d3ae621f-62e6-487c-bccb-9c1916756122",
+                    "id": "0f5324e0-652d-4583-8ea6-19c6d9828c03",
                     "path": "<Gamepad>/dpad/down",
                     "interactions": "",
                     "processors": "",
@@ -181,7 +181,7 @@
                 },
                 {
                     "name": "left",
-                    "id": "0da256d8-fd70-4f87-b152-f9b277e143a9",
+                    "id": "501b2b6a-d841-4d86-9757-c79282f9f71f",
                     "path": "<Gamepad>/dpad/left",
                     "interactions": "",
                     "processors": "",
@@ -192,7 +192,7 @@
                 },
                 {
                     "name": "right",
-                    "id": "2ee9c4ad-2fd7-4016-8415-dc3b575e2bea",
+                    "id": "7a4cd78c-083a-4575-9e3c-917ad0cae1a5",
                     "path": "<Gamepad>/dpad/right",
                     "interactions": "",
                     "processors": "",
@@ -203,7 +203,7 @@
                 },
                 {
                     "name": "Left Stick",
-                    "id": "da2277f4-2221-4dfb-9dc2-ac15d5f10f87",
+                    "id": "487f9375-2794-458b-ae1f-59d58967216c",
                     "path": "2DVector",
                     "interactions": "",
                     "processors": "",
@@ -214,7 +214,7 @@
                 },
                 {
                     "name": "up",
-                    "id": "7a2a1bc7-1fce-46dc-9dec-bb7b93cbf7af",
+                    "id": "a0d5d633-77a5-4063-8c2d-1cb20934036b",
                     "path": "<Gamepad>/leftStick/up",
                     "interactions": "",
                     "processors": "",
@@ -225,7 +225,7 @@
                 },
                 {
                     "name": "down",
-                    "id": "0d247cd6-9112-4519-8a2f-3b3f319a40fa",
+                    "id": "978cffcf-0b09-4ee6-b3e7-d1a11cf0193a",
                     "path": "<Gamepad>/leftStick/down",
                     "interactions": "",
                     "processors": "",
@@ -236,7 +236,7 @@
                 },
                 {
                     "name": "left",
-                    "id": "b68ceb25-e7d9-4b9a-9f4e-4591f2289d16",
+                    "id": "59804d00-e085-4fb1-be27-688a586d3d06",
                     "path": "<Gamepad>/leftStick/left",
                     "interactions": "",
                     "processors": "",
@@ -247,7 +247,7 @@
                 },
                 {
                     "name": "right",
-                    "id": "d8d8dc95-042a-48ee-93a1-7578009a97e8",
+                    "id": "3576b73c-364d-471f-95b4-3426cd9fc31b",
                     "path": "<Gamepad>/leftStick/right",
                     "interactions": "",
                     "processors": "",
@@ -258,11 +258,158 @@
                 },
                 {
                     "name": "",
-                    "id": "403bf71b-5d3d-4e6a-a0da-1a2c0548177e",
+                    "id": "55237697-92d6-4ca1-8825-89b20e772d0a",
                     "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
                     "groups": "Xbox 360 Controller",
+                    "action": "Faster",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Snake Player One",
+            "id": "a0bc74fa-6c25-45e3-bd78-e6b4de78e180",
+            "actions": [
+                {
+                    "name": "Movement",
+                    "type": "Value",
+                    "id": "459d378a-e973-400b-acd9-41706584e85c",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Faster",
+                    "type": "Button",
+                    "id": "1e536fdd-ae8d-4bdf-9f25-19a649bdb376",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "WASD",
+                    "id": "d7aa9cce-89ec-40a8-b03c-b4731c911534",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "83dc24ba-41e6-4d38-803b-08b3b1066273",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "8c8ff3b9-de1f-41a3-984d-ac9595adf2ca",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "deaa05cf-be8b-4d2d-870d-c972d0487621",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "c6553215-e2cd-4bd4-8abf-cf7bc279ba69",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Arrow Keys",
+                    "id": "acb7823a-d182-4355-90e0-1e52c1eb7c93",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "890917aa-62eb-48a4-8df2-0a27d328500f",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "a799a345-46d0-4a6e-b7a7-5089794215d5",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "7f82f85f-c047-4e12-a441-658f73bdfff4",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "9b0ea40b-226c-4a43-9cc3-a8487e307a31",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "c81d305a-739a-468f-bd44-8d7a36a0a756",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
                     "action": "Faster",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -475,6 +622,153 @@
                     "processors": "",
                     "groups": "Keyboard",
                     "action": "Select",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Snake Player Two",
+            "id": "b39166fb-85a1-46ba-be20-55bcabd46771",
+            "actions": [
+                {
+                    "name": "Movement",
+                    "type": "Value",
+                    "id": "ad4bbe1d-ed02-433d-aa03-b1cb991940fd",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Faster",
+                    "type": "Button",
+                    "id": "f94ce4dc-4138-4a0f-abd4-4e605e3fc2dd",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "Dpad",
+                    "id": "e04d50dc-5e4d-4fd2-96ad-5915bc6e4982",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "7ca3fc3a-136c-45f6-9895-a51415f61402",
+                    "path": "<Gamepad>/dpad/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Xbox 360 Controller",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "36d86261-ee20-446f-b056-5bb2357a7799",
+                    "path": "<Gamepad>/dpad/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Xbox 360 Controller",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "f837c67f-8310-4785-9b55-da779866ef41",
+                    "path": "<Gamepad>/dpad/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Xbox 360 Controller",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "992a6b4e-a8ad-4857-af85-9e8547aea06e",
+                    "path": "<Gamepad>/dpad/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Xbox 360 Controller",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Left Stick",
+                    "id": "4ccb8f7c-2c4d-4366-bbb4-20a3e83d68fd",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "50724bf8-4785-4577-8d41-372d3003f434",
+                    "path": "<Gamepad>/leftStick/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Xbox 360 Controller",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "85ee1902-d2b8-46de-a9d4-fc10359d609c",
+                    "path": "<Gamepad>/leftStick/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Xbox 360 Controller",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "b760dcd0-2c76-4f41-a27b-c9eda49f34a7",
+                    "path": "<Gamepad>/leftStick/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Xbox 360 Controller",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "4a9534c4-f716-40e3-b737-18597ae6aba9",
+                    "path": "<Gamepad>/leftStick/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Xbox 360 Controller",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "e97edbfd-08fe-43fd-8cb9-2fe2fe1494f7",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Xbox 360 Controller",
+                    "action": "Faster",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
