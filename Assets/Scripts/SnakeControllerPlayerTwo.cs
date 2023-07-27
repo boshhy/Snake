@@ -135,9 +135,32 @@ public class SnakeControllerPlayerTwo : MonoBehaviour
             snakeBody.Add(tempBodySegment);
         }
 
+        //snakeMovement = Vector2.down;
+        currentSnakeFrame = snakeFrameSpeed;
         gameObject.transform.position = startingLocation;
     }
 
+    private void OtherSnakeDied()
+    {
+        for (int i = 1; i < snakeBody.Count; i++)
+        {
+            Destroy(snakeBody[i].gameObject);
+        }
+
+        snakeBody.Clear();
+        snakeBody.Add(gameObject.transform);
+
+        for (int i = 1; i < 3; i++)
+        {   
+            Transform tempBodySegment = Instantiate(bodySegment);
+            tempBodySegment.position = startingLocation;
+            snakeBody.Add(tempBodySegment);
+        }
+
+        //snakeMovement = Vector2.down;
+        currentSnakeFrame = snakeFrameSpeed;
+        gameObject.transform.position = startingLocation;
+    }
     private void SpeedUp(InputAction.CallbackContext cntx)
     {
         if (!PauseMenu.isPaused)
@@ -160,6 +183,8 @@ public class SnakeControllerPlayerTwo : MonoBehaviour
         playerControls.SnakePlayerTwo.Movement.performed += MoveSnake;
         playerControls.SnakePlayerTwo.Faster.performed += SpeedUp;
         playerControls.SnakePlayerTwo.Faster.canceled += BackToNormalSpeed;
+
+        SnakeControllerPlayerOne.onDeath += OtherSnakeDied;
     }
 
     private void  OnDisable()
@@ -168,5 +193,7 @@ public class SnakeControllerPlayerTwo : MonoBehaviour
         playerControls.SnakePlayerTwo.Movement.performed -= MoveSnake;
         playerControls.SnakePlayerTwo.Faster.performed -= SpeedUp;
         playerControls.SnakePlayerTwo.Faster.canceled -= BackToNormalSpeed;
+    
+        SnakeControllerPlayerOne.onDeath -= OtherSnakeDied;
     }
 }

@@ -24,13 +24,15 @@ public class Score : MonoBehaviour
     public void OnEnable()
     {
         Food.onFoodCollected += IncreaseScore;
-        SnakeController.onDeath += ResetScore;
+        SnakeControllerPlayerOne.onDeath += ResetScore;
+        SnakeControllerPlayerTwo.onDeath += ResetScore;
     }
 
     public void OnDisable()
     {
         Food.onFoodCollected -= IncreaseScore;
-        SnakeController.onDeath -= ResetScore;
+        SnakeControllerPlayerOne.onDeath -= ResetScore;
+        SnakeControllerPlayerTwo.onDeath -= ResetScore;
     }
 
     private void IncreaseScore()
@@ -48,15 +50,15 @@ public class Score : MonoBehaviour
 
     void CheckHighScore()
     {
-        if (foodCount > PlayerPrefs.GetInt("High Score", 0))
+        if (foodCount > PlayerPrefs.GetInt("Co-op High Score", 0))
         {
-            PlayerPrefs.SetInt("High Score", foodCount);
+            PlayerPrefs.SetInt("Co-op High Score", foodCount);
             UpdateHighScore();
         }
     }
     
     void UpdateHighScore()
     {
-        highScoreText.text = "HIGH SCORE: " + PlayerPrefs.GetInt("High Score", 0).ToString();
+        highScoreText.text = "CO-OP HIGH SCORE: " + PlayerPrefs.GetInt("Co-op High Score", 0).ToString();
     }
 }

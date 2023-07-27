@@ -1432,7 +1432,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'HIGH SCORE: 0'
+  m_text: 'CO-OP HIGH SCORE: 0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 571c0547117223947be16bcea08846e1, type: 2}
   m_sharedMaterial: {fileID: 7183785057891486911, guid: 571c0547117223947be16bcea08846e1, type: 2}
