@@ -8,6 +8,10 @@ TagManager:
   - Head
   - Wall
   - Body
+  - PlayerOneFood
+  - PlayerTwoFood
+  - PlayerOne
+  - PlayerTwo
   layers:
   - Default
   - TransparentFX

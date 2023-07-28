@@ -93,7 +93,7 @@ public class SnakeControllerPlayerOne : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Food")
+        if (other.tag == "PlayerOneFood")
         {
             Grow();
         }
@@ -200,5 +200,20 @@ public class SnakeControllerPlayerOne : MonoBehaviour
         playerControls.SnakePlayerOne.Faster.canceled -= BackToNormalSpeed;
 
         SnakeControllerPlayerTwo.onDeath -= OtherSnakeDied;
+    }
+
+    public bool DoesItOverlap(Vector3 foodPosition)
+    {
+        //Debug.Log("Checking for overlappingon snake one");
+        for (int i = 0; i <= snakeBody.Count - 1; i++)
+        {
+            
+            if (snakeBody[i].position == foodPosition)
+            {
+                Debug.Log("OVERLAP OCCURED!!!!!!!!!!!!!!!!!!!!!!! Chaning food to new location");
+                return true;
+            } 
+        }
+        return false;
     }
 }

@@ -23,14 +23,16 @@ public class Score : MonoBehaviour
 
     public void OnEnable()
     {
-        Food.onFoodCollected += IncreaseScore;
+        FoodPlayerOne.onFoodCollected += IncreaseScore;
+        FoodPlayerTwo.onFoodCollected += IncreaseScore;
         SnakeControllerPlayerOne.onDeath += ResetScore;
         SnakeControllerPlayerTwo.onDeath += ResetScore;
     }
 
     public void OnDisable()
     {
-        Food.onFoodCollected -= IncreaseScore;
+        FoodPlayerOne.onFoodCollected -= IncreaseScore;
+        FoodPlayerTwo.onFoodCollected -= IncreaseScore;
         SnakeControllerPlayerOne.onDeath -= ResetScore;
         SnakeControllerPlayerTwo.onDeath -= ResetScore;
     }

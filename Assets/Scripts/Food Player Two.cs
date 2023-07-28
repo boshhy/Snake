@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class Food : MonoBehaviour
+public class FoodPlayerTwo : MonoBehaviour
 {
     public static event Action onFoodCollected;
-    public SnakeController thePlayer;
-
+    public SnakeControllerPlayerOne playerOne;
+    public SnakeControllerPlayerTwo playerTwo;
 
     public int xBoundsLow = -41;
     public int yBoundsLow = -22;
@@ -35,7 +35,7 @@ public class Food : MonoBehaviour
         
         gameObject.transform.position = new Vector2(Mathf.Round(x), Mathf.Round(y));
 
-        if (thePlayer.DoesItOverlap(gameObject.transform.position))
+        if (playerOne.DoesItOverlap(gameObject.transform.position) || playerTwo.DoesItOverlap(gameObject.transform.position))
         {
             setRandom();
         }
@@ -43,7 +43,7 @@ public class Food : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "PlayerTwo")
         {
             AudioManager.instance.PlaySFX(0);
             if (onFoodCollected != null)

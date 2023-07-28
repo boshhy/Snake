@@ -159,4 +159,20 @@ public class SnakeController : MonoBehaviour
         playerControls.Snake.Faster.performed -= SpeedUp;
         playerControls.Snake.Faster.canceled -= BackToNormalSpeed;
     }
+
+    
+    public bool DoesItOverlap(Vector3 foodPosition)
+    {
+        //Debug.Log("Checking for overlappingon snake two");
+        for (int i = 0; i <= snakeBody.Count - 1; i++)
+        {
+            
+            if (snakeBody[i].position == foodPosition)
+            {
+                Debug.Log("OVERLAP OCCURED!!!!!!!!!!!!!!!!!!!!!!! Chaning food to new location");
+                return true;
+            } 
+        }
+        return false;
+    }
 }
