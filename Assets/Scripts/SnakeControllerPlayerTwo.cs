@@ -18,6 +18,7 @@ public class SnakeControllerPlayerTwo : MonoBehaviour
     public int snakeFrameSpeed = 10;
     public int snakeSpeedNormal = 10;
     public int snakeSpeedFast = 10;
+    public int numberOfSegments = 3;
 
     void Awake()
     {
@@ -128,7 +129,7 @@ public class SnakeControllerPlayerTwo : MonoBehaviour
         snakeBody.Clear();
         snakeBody.Add(gameObject.transform);
 
-        for (int i = 1; i < 3; i++)
+        for (int i = 1; i < numberOfSegments; i++)
         {
             Transform tempBodySegment = Instantiate(bodySegment);
             tempBodySegment.position = startingLocation;
@@ -150,7 +151,7 @@ public class SnakeControllerPlayerTwo : MonoBehaviour
         snakeBody.Clear();
         snakeBody.Add(gameObject.transform);
 
-        for (int i = 1; i < 3; i++)
+        for (int i = 1; i < numberOfSegments; i++)
         {   
             Transform tempBodySegment = Instantiate(bodySegment);
             tempBodySegment.position = startingLocation;

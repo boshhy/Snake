@@ -978,8 +978,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 465691596}
-  - component: {fileID: 465691595}
   - component: {fileID: 465691597}
+  - component: {fileID: 465691598}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -987,21 +987,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &465691595
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 465691594}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da7f4720851a69a41a0a0f4f6ece2485, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CurrentScore: {fileID: 31258416}
-  highScoreText: {fileID: 975033581}
-  foodCount: 0
 --- !u!4 &465691596
 Transform:
   m_ObjectHideFlags: 0
@@ -1030,6 +1015,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myFixedDeltaTime: 0.02
+--- !u!114 &465691598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 465691594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e899a2e0885b04439c28bf51a6bea17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentScore: {fileID: 31258416}
+  highScoreText: {fileID: 975033581}
+  foodCount: 0
 --- !u!1 &505226807 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6180518110641819953, guid: dea7ee1a484256a4c9a6db81c8659c4c, type: 3}
@@ -1770,7 +1770,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'CO-OP HIGH SCORE: 0'
+  m_text: 'EASY CO-OP HIGH SCORE: 0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 571c0547117223947be16bcea08846e1, type: 2}
   m_sharedMaterial: {fileID: 7183785057891486911, guid: 571c0547117223947be16bcea08846e1, type: 2}
@@ -2904,7 +2904,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6180518109772448201, guid: dea7ee1a484256a4c9a6db81c8659c4c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6180518109772448205, guid: dea7ee1a484256a4c9a6db81c8659c4c, type: 3}
       propertyPath: m_Pivot.x

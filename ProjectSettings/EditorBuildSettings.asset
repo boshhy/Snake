@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Snake Two Player.unity
+    path: Assets/Scenes/Snake Two Player Easy.unity
     guid: 09b50da9a12580b4ba231ce7ebcb9800
   - enabled: 1
     path: Assets/Scenes/Snake One Player.unity
