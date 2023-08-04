@@ -73,6 +73,7 @@ public class MainMenu : MonoBehaviour
 
     public void PlayGame()
     {
+        EventSystem.current.SetSelectedGameObject(null);
         AudioManager.instance.PlaySFX(0);
         AudioManager.instance.NormalSpeed();
         AudioManager.instance.PlayBGM();
@@ -87,6 +88,7 @@ public class MainMenu : MonoBehaviour
 
     public void TwoPlayerEasy()
     {
+        EventSystem.current.SetSelectedGameObject(null);
         AudioManager.instance.PlaySFX(0);
         AudioManager.instance.NormalSpeed();
         AudioManager.instance.PlayBGM();
@@ -95,6 +97,7 @@ public class MainMenu : MonoBehaviour
 
     public void TwoPlayerMedium()
     {
+        EventSystem.current.SetSelectedGameObject(null);
         AudioManager.instance.PlaySFX(0);
         AudioManager.instance.NormalSpeed();
         AudioManager.instance.PlayBGM();
@@ -103,6 +106,7 @@ public class MainMenu : MonoBehaviour
 
     public void TwoPlayerHard()
     {
+        EventSystem.current.SetSelectedGameObject(null);
         AudioManager.instance.PlaySFX(0);
         AudioManager.instance.NormalSpeed();
         AudioManager.instance.PlayBGM();
@@ -110,6 +114,7 @@ public class MainMenu : MonoBehaviour
     }
     public void VersusEasy()
     {
+        EventSystem.current.SetSelectedGameObject(null);
         AudioManager.instance.PlaySFX(0);
         AudioManager.instance.NormalSpeed();
         AudioManager.instance.PlayBGM();
@@ -118,6 +123,7 @@ public class MainMenu : MonoBehaviour
 
     public void VersusMedium()
     {
+        EventSystem.current.SetSelectedGameObject(null);
         AudioManager.instance.PlaySFX(0);
         AudioManager.instance.NormalSpeed();
         AudioManager.instance.PlayBGM();
@@ -125,6 +131,7 @@ public class MainMenu : MonoBehaviour
     }
     public void VersusHard()
     {
+        EventSystem.current.SetSelectedGameObject(null);
         AudioManager.instance.PlaySFX(0);
         AudioManager.instance.NormalSpeed();
         AudioManager.instance.PlayBGM();

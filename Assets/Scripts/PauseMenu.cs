@@ -22,6 +22,7 @@ public class PauseMenu : MonoBehaviour
 
 
 
+
     void Awake()
     {
         playerUIControls = new PlayerControls();
@@ -31,6 +32,7 @@ public class PauseMenu : MonoBehaviour
     { 
         playerUIControls.PauseUI.Enable();
         playerUIControls.PauseUI.Pause.performed += PressStart;
+        //RandomButton.Select();
     }
 
     void OnDisable()
@@ -42,27 +44,22 @@ public class PauseMenu : MonoBehaviour
     void Start()
     {
         // Pause menu shoul not be active when loading a scene
+        //EventSystem.current.SetSelectedGameObject(null);
+        //primaryButton.Select();
         pauseMenu.SetActive(false); 
         theMusicMenu.SetActive(false);
+        
+        //EventSystem.current.SetSelectedGameObject(null);
+        
+
+        //Invoke("SelectButton", 0.2f);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        // // Check to see if player has pressed the 'escape' key
-        // if (Input.GetKeyDown(KeyCode.Escape))
-        // {
-        //     // If game is paused, then resume the game
-        //     if (isPaused)
-        //     {
-        //         ResumeGame();
-        //     }
-        //     // Else game is playing so pause the game
-        //     else
-        //     {
-        //         PauseGame();
-        //     }
-        // }
+
     }
     
     public void PressStart(InputAction.CallbackContext cntx)
@@ -88,8 +85,13 @@ public class PauseMenu : MonoBehaviour
         AudioManager.instance.PlaySFX(1);
 
         // Activate the pause menu
+        //EventSystem.current.SetSelectedGameObject(null);
+        
         pauseMenu.SetActive(true);
+        
+        EventSystem.current.SetSelectedGameObject(null);
         primaryButton.Select();
+    
 
         // Set timescale to zero so nothing gets updated
         Time.timeScale = 0f;
@@ -116,11 +118,11 @@ public class PauseMenu : MonoBehaviour
         isPaused = false;
     }
 
-
     // Used to quit the game
     public void Quit()
     {
         // Application.Quit();
+        EventSystem.current.SetSelectedGameObject(null);
         isPaused = false;
         Time.timeScale = 1f;
         AudioManager.instance.PlaySFX(2);
