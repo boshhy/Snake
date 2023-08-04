@@ -114,6 +114,4 @@ public class PauseMenu : MonoBehaviour
         // Application.Quit();
         SceneManager.LoadScene("Start Menu");
     }
-
-
 }
