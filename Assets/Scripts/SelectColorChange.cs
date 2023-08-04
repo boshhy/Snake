@@ -19,6 +19,7 @@ public class SelectColorChange : MonoBehaviour, ISelectHandler, IDeselectHandler
     {
         theTextHolder = gameObject.GetComponentInChildren<TextMeshProUGUI>();
         theTextHolder.alpha = 1.0f;
+        //AudioManager.instance.PlaySFX(0);
     }
 
     

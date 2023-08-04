@@ -14,7 +14,7 @@ public class SnakeController : MonoBehaviour
     public Transform bodySegment;
     public static event Action onDeath;
 
-    public AudioSource bgm;
+    //public AudioSource bgm;
 
     void Awake()
     {
@@ -27,6 +27,9 @@ public class SnakeController : MonoBehaviour
     {
 
         ResetGame();
+        //bgm = AudioManager.instance.bgm;
+        AudioManager.instance.PlayBGM();
+        snakeMovement = Vector2.down;
     }
 
     // Update is called once per frame
@@ -130,7 +133,8 @@ public class SnakeController : MonoBehaviour
         if (!PauseMenu.isPaused)
         {
             
-            bgm.pitch = 1.2f;
+            //bgm.pitch = 1.2f;
+            AudioManager.instance.SpeedUp();
             Time.timeScale = 3.0f;
         }
     }
@@ -139,7 +143,7 @@ public class SnakeController : MonoBehaviour
     {
         if (!PauseMenu.isPaused)
         {
-            bgm.pitch = 1.0f;
+            AudioManager.instance.NormalSpeed();
             Time.timeScale = 1.0f;
         }
     }

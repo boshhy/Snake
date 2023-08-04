@@ -9,6 +9,8 @@ public class AudioManager : MonoBehaviour
     // Used to reference this one and only instance 
     public static AudioManager instance;
 
+    public AudioSource bgm;
+
     public AudioSource[] SFX;
 
     void Awake()
@@ -46,5 +48,25 @@ public class AudioManager : MonoBehaviour
         SFX[sfx].Stop();
         
         SFX[sfx].Play();
+    }
+
+    public void PlayBGM()
+    {
+        bgm.Play();
+    }
+
+    public void StopBGM()
+    {
+        bgm.Stop();
+    }
+
+    public void SpeedUp()
+    {
+        bgm.pitch = 1.2f;
+    }    
+    
+    public void NormalSpeed()
+    {
+        bgm.pitch = 1.0f;
     }
 }

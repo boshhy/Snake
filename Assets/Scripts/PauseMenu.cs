@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 // Used to control the pause menu
 public class PauseMenu : MonoBehaviour
@@ -11,10 +12,13 @@ public class PauseMenu : MonoBehaviour
     // Get a reference to the pause menu object    
     public GameObject pauseMenu;
     public PlayerControls playerUIControls;
+    //public GameObject thePauseMenu;
+    public GameObject theMusicMenu;
 
     // Public Static bool so other scripts can reference and make sure game is not paused
     public static bool isPaused = false;
     public Button primaryButton;
+    public Button onButton;
 
 
 
@@ -39,6 +43,7 @@ public class PauseMenu : MonoBehaviour
     {
         // Pause menu shoul not be active when loading a scene
         pauseMenu.SetActive(false); 
+        theMusicMenu.SetActive(false);
     }
 
     // Update is called once per frame
@@ -62,6 +67,7 @@ public class PauseMenu : MonoBehaviour
     
     public void PressStart(InputAction.CallbackContext cntx)
     {
+
         // If game is paused, then resume the game
         if (isPaused)
         {
@@ -72,6 +78,7 @@ public class PauseMenu : MonoBehaviour
         {
             PauseGame();
         }
+        
     }
 
     // Used to pause the game
@@ -98,7 +105,9 @@ public class PauseMenu : MonoBehaviour
         AudioManager.instance.PlaySFX(1);
 
         // Deactivate the pause menu
+        EventSystem.current.SetSelectedGameObject(null);
         pauseMenu.SetActive(false);
+        theMusicMenu.SetActive(false);
 
         // Set timescale back to 1 so we update normally
         Time.timeScale = 1f;
@@ -112,6 +121,39 @@ public class PauseMenu : MonoBehaviour
     public void Quit()
     {
         // Application.Quit();
+        isPaused = false;
+        Time.timeScale = 1f;
+        AudioManager.instance.PlaySFX(2);
         SceneManager.LoadScene("Start Menu");
+    }
+
+    public void StopMusic()
+    {
+        AudioManager.instance.PlaySFX(2);
+        AudioManager.instance.StopBGM();
+    }
+
+    public void PlayMusic()
+    {
+        AudioManager.instance.PlaySFX(2);
+        AudioManager.instance.PlayBGM();
+    }
+
+    public void BackToPauseMenu()
+    {
+        AudioManager.instance.PlaySFX(2);
+        EventSystem.current.SetSelectedGameObject(null);
+        theMusicMenu.SetActive(false);
+        pauseMenu.SetActive(true);
+        primaryButton.Select();
+    }
+
+    public void MusicSetttings()
+    {
+        AudioManager.instance.PlaySFX(2);
+        EventSystem.current.SetSelectedGameObject(null);
+        pauseMenu.SetActive(false);
+        theMusicMenu.SetActive(true);
+        onButton.Select();
     }
 }
