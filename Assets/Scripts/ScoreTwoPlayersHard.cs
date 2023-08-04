@@ -52,15 +52,15 @@ public class ScoreTwoPlayersHard : MonoBehaviour
 
     void CheckHighScore()
     {
-        if (foodCount > PlayerPrefs.GetInt("Medium Co-op High Score", 0))
+        if (foodCount > PlayerPrefs.GetInt("Hard Co-op High Score", 0))
         {
-            PlayerPrefs.SetInt("Medium Co-op High Score", foodCount);
+            PlayerPrefs.SetInt("Hard Co-op High Score", foodCount);
             UpdateHighScore();
         }
     }
     
     void UpdateHighScore()
     {
-        highScoreText.text = "MEDIUM CO-OP HIGH SCORE: " + PlayerPrefs.GetInt("Medium Co-op High Score", 0).ToString();
+        highScoreText.text = "HARD CO-OP HIGH SCORE: " + PlayerPrefs.GetInt("Hard Co-op High Score", 0).ToString();
     }
 }

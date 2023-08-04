@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 // Used to control the pause menu
 public class PauseMenu : MonoBehaviour
@@ -110,6 +111,9 @@ public class PauseMenu : MonoBehaviour
     // Used to quit the game
     public void Quit()
     {
-        Application.Quit();
+        // Application.Quit();
+        SceneManager.LoadScene("Start Menu");
     }
+
+
 }

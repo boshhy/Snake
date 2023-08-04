@@ -6,9 +6,27 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Snake Two Player Easy.unity
-    guid: 09b50da9a12580b4ba231ce7ebcb9800
+    path: Assets/Scenes/Start Menu.unity
+    guid: e411a235171385e4aac46c23847c14e9
   - enabled: 1
     path: Assets/Scenes/Snake One Player.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Snake Two Player Easy.unity
+    guid: 09b50da9a12580b4ba231ce7ebcb9800
+  - enabled: 1
+    path: Assets/Scenes/Snake Two Player Medium.unity
+    guid: e6c2a8ccf909e3b478aabae1d65d1492
+  - enabled: 1
+    path: Assets/Scenes/Snake Two Player Hard.unity
+    guid: 245e852c02f03de429e8466d75a862fe
+  - enabled: 1
+    path: Assets/Scenes/Snake Versus Easy.unity
+    guid: 82ff78f5b3337c745a6585aee57e7a44
+  - enabled: 1
+    path: Assets/Scenes/Snake Versus Medium.unity
+    guid: 32def87ba7b23154fb0767323767a597
+  - enabled: 1
+    path: Assets/Scenes/Snake Versus Hard.unity
+    guid: d24717c4bc8632340aabdc3db17a12ad
   m_configObjects: {}

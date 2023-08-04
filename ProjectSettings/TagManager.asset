@@ -12,6 +12,7 @@ TagManager:
   - PlayerTwoFood
   - PlayerOne
   - PlayerTwo
+  - Versus Food
   layers:
   - Default
   - TransparentFX

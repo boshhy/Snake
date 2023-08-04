@@ -650,6 +650,197 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             ]
         },
         {
+            ""name"": ""MainMenuUI"",
+            ""id"": ""f61d5cc6-f7c6-46f6-a38d-edb7833e52d8"",
+            ""actions"": [
+                {
+                    ""name"": ""Move"",
+                    ""type"": ""Value"",
+                    ""id"": ""e45dd69a-196d-43f1-b2cb-697e2bf55f09"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Select"",
+                    ""type"": ""Button"",
+                    ""id"": ""ec006337-584e-45ea-869b-451323ad6383"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": ""Arrow Keys"",
+                    ""id"": ""fc892c86-a181-4304-a314-1ec3b42d6f6b"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""d4cbad77-35eb-4b68-ac88-1ea37ce53f48"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""6f3e6d6c-ab7b-4987-a276-fc80572bfc31"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""WS Keys"",
+                    ""id"": ""1865e01a-50dd-45e1-9553-4636f76c6073"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""3d1ce879-aff1-466c-b590-703401df69f3"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""e7687c72-8087-4f24-9e66-064e9028ac57"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""Xbox 360 Controller"",
+                    ""id"": ""e0bddff7-2ae5-43ef-a57e-80122d3260b4"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""2b29fbfb-93c5-41a3-b959-a463be5a616b"",
+                    ""path"": ""<Gamepad>/dpad/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Xbox 360 Controller"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""f3e884a7-54f5-491e-ad84-df4c6a53a625"",
+                    ""path"": ""<Gamepad>/dpad/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Xbox 360 Controller"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""Xbox 360 Controller Left Stick"",
+                    ""id"": ""6fa2604e-f864-40ab-bf7e-2425bd6408f5"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""e8db4baf-65d5-47ea-89b3-42bf223d7928"",
+                    ""path"": ""<Gamepad>/leftStick/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Xbox 360 Controller"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""b0768c26-f9db-49f6-a116-52ec45bdf973"",
+                    ""path"": ""<Gamepad>/leftStick/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Xbox 360 Controller"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a4b5e4d2-86d6-45cc-aa87-f527a7d2ad48"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Xbox 360 Controller"",
+                    ""action"": ""Select"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""12603a56-ff56-45a8-83b7-a2d784abb015"",
+                    ""path"": ""<Keyboard>/enter"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Select"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b6176c09-05b1-4f67-a997-5f77a9cd31b8"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Xbox 360 Controller"",
+                    ""action"": ""Select"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
             ""name"": ""Snake Player Two"",
             ""id"": ""b39166fb-85a1-46ba-be20-55bcabd46771"",
             ""actions"": [
@@ -835,6 +1026,10 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         m_PauseUI_Pause = m_PauseUI.FindAction("Pause", throwIfNotFound: true);
         m_PauseUI_Move = m_PauseUI.FindAction("Move", throwIfNotFound: true);
         m_PauseUI_Select = m_PauseUI.FindAction("Select", throwIfNotFound: true);
+        // MainMenuUI
+        m_MainMenuUI = asset.FindActionMap("MainMenuUI", throwIfNotFound: true);
+        m_MainMenuUI_Move = m_MainMenuUI.FindAction("Move", throwIfNotFound: true);
+        m_MainMenuUI_Select = m_MainMenuUI.FindAction("Select", throwIfNotFound: true);
         // Snake Player Two
         m_SnakePlayerTwo = asset.FindActionMap("Snake Player Two", throwIfNotFound: true);
         m_SnakePlayerTwo_Movement = m_SnakePlayerTwo.FindAction("Movement", throwIfNotFound: true);
@@ -1067,6 +1262,60 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     }
     public PauseUIActions @PauseUI => new PauseUIActions(this);
 
+    // MainMenuUI
+    private readonly InputActionMap m_MainMenuUI;
+    private List<IMainMenuUIActions> m_MainMenuUIActionsCallbackInterfaces = new List<IMainMenuUIActions>();
+    private readonly InputAction m_MainMenuUI_Move;
+    private readonly InputAction m_MainMenuUI_Select;
+    public struct MainMenuUIActions
+    {
+        private @PlayerControls m_Wrapper;
+        public MainMenuUIActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Move => m_Wrapper.m_MainMenuUI_Move;
+        public InputAction @Select => m_Wrapper.m_MainMenuUI_Select;
+        public InputActionMap Get() { return m_Wrapper.m_MainMenuUI; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(MainMenuUIActions set) { return set.Get(); }
+        public void AddCallbacks(IMainMenuUIActions instance)
+        {
+            if (instance == null || m_Wrapper.m_MainMenuUIActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_MainMenuUIActionsCallbackInterfaces.Add(instance);
+            @Move.started += instance.OnMove;
+            @Move.performed += instance.OnMove;
+            @Move.canceled += instance.OnMove;
+            @Select.started += instance.OnSelect;
+            @Select.performed += instance.OnSelect;
+            @Select.canceled += instance.OnSelect;
+        }
+
+        private void UnregisterCallbacks(IMainMenuUIActions instance)
+        {
+            @Move.started -= instance.OnMove;
+            @Move.performed -= instance.OnMove;
+            @Move.canceled -= instance.OnMove;
+            @Select.started -= instance.OnSelect;
+            @Select.performed -= instance.OnSelect;
+            @Select.canceled -= instance.OnSelect;
+        }
+
+        public void RemoveCallbacks(IMainMenuUIActions instance)
+        {
+            if (m_Wrapper.m_MainMenuUIActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IMainMenuUIActions instance)
+        {
+            foreach (var item in m_Wrapper.m_MainMenuUIActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_MainMenuUIActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public MainMenuUIActions @MainMenuUI => new MainMenuUIActions(this);
+
     // Snake Player Two
     private readonly InputActionMap m_SnakePlayerTwo;
     private List<ISnakePlayerTwoActions> m_SnakePlayerTwoActionsCallbackInterfaces = new List<ISnakePlayerTwoActions>();
@@ -1151,6 +1400,11 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     public interface IPauseUIActions
     {
         void OnPause(InputAction.CallbackContext context);
+        void OnMove(InputAction.CallbackContext context);
+        void OnSelect(InputAction.CallbackContext context);
+    }
+    public interface IMainMenuUIActions
+    {
         void OnMove(InputAction.CallbackContext context);
         void OnSelect(InputAction.CallbackContext context);
     }

@@ -27,4 +27,10 @@ public class SelectColorChange : MonoBehaviour, ISelectHandler, IDeselectHandler
         theTextHolder = gameObject.GetComponentInChildren<TextMeshProUGUI>();
         theTextHolder.alpha = 0.2f;
     }
+
+    public void SelectIt()
+    {
+        theTextHolder = gameObject.GetComponentInChildren<TextMeshProUGUI>();
+        theTextHolder.alpha = 1.0f;
+    }
 }
